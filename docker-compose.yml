@@ -1,0 +1,7 @@
+version: "3.9"
+
+services:
+  the-day-after-tommorow:
+    build: ./apps/the-day-after-tommorow
+    ports:
+      - "3001:3000"
