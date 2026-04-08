@@ -1,9 +1,13 @@
 # くそすぎるよアプリ集
 とんペディア_Labのスプフェス2026展示用アプリです。
 
-## How to use
+## Web Apps
 
-```docker compose up```
-で全部起動します。
-ポート(Links)は以下の通りです。
-docker-composeを確認してください。
+### アプリ一覧
+
+Webアプリにはこんなものがあります：
+- 明後日の日付& AM/PMが逆に見えるUI
+
+### How to use
+
+`/web`の中で`npm run`してね

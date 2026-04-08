@@ -8,7 +8,7 @@ export default function Layout({
       <h1 style={{
         backgroundColor: "white",
         color: "black"
-      }}>📅 The Day After Tomorrow</h1>
+      }}>明日の翌日は？</h1>
       <hr style={{ margin: "20px 0" }} />
       {children}
     </div>
