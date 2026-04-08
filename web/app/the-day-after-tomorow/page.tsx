@@ -20,23 +20,37 @@ export default function Page() {
   const isAm = true
 
   return (
-    <div>
-      <h2>明後日のToDo</h2>
-      <div className={styles.mainArea}>
-        <div className={styles.datetimeArea}>
-          <div className={styles.dateArea}>
-            <div className={styles.dateDblock}>{dd}</div>
-            <div className={styles.dateYblock}>{yy}</div>
-            <div className={styles.dateMblock}>{MM}</div>
+    <div className={styles.mainArea}>
+      <h2 className={styles.mainTitle}>The Day After Tomorow</h2>
+      <div className={styles.datetimeArea}>
+        <div className={styles.dateArea}>
+          <div className={styles.dateDblock}>{dd}</div>
+          <div className={styles.dateYblock}>{yy}</div>
+          <div className={styles.dateMblock}>{MM}</div>
+        </div>
+        <div className={styles.clockArea}>
+          <div className={styles.clockAMPMblock}>
+            <div className={`${styles.clockAMblock} ${isAm ? styles.selectedAMPM : styles.unselectedAMPM}`}>AM</div>
+            <div className={`${styles.clockAMblock} ${isAm ? styles.unselectedAMPM : styles.selectedAMPM}`}>PM</div>
           </div>
-          <div className={styles.clockArea}>
-            <div className={styles.clockAMPMblock}>
-              <div className={`${styles.clockAMblock} ${isAm ? styles.selectedAMPM : styles.unselectedAMPM}`}>AM</div>
-              <div className={`${styles.clockAMblock} ${isAm ? styles.unselectedAMPM : styles.selectedAMPM}`}>PM</div>
-            </div>
-            <div className={styles.clockHblock}>{hh}</div>
-            <div className={styles.clockMblock}>{mm}</div>
-          </div>
+          <div className={styles.clockHblock}>{hh}</div>
+          <div className={styles.clockMblock}>{mm}</div>
+        </div>
+      </div>
+      <div className={styles.todoArea}>
+        <div className={styles.todoItem}>
+          <input type="checkbox" />
+          <span>眠くなったら寝る</span>
+        </div>
+
+        <div className={styles.todoItem}>
+          <input type="checkbox" />
+          <span>お昼過ぎに起きる</span>
+        </div>
+
+        <div className={styles.todoItem}>
+          <input type="checkbox" />
+          <span>パンで歯を磨く</span>
         </div>
       </div>
     </div>
