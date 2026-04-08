@@ -1,23 +1,64 @@
-import styles from "./style.module.css"
+"use client";
+import { useState, useEffect } from "react";
+import styles from "./style.module.css";
+
+type Todo = {
+  id: number;
+  text: string;
+  done: boolean;
+};
+
 export default function Page() {
-  const now = new Date();
+  const [now, setNow] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setNow(new Date());
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const yy = now.getFullYear().toString();
+  const MM = String(now.getMonth() + 1).padStart(2, "0");
+  const dd = String(now.getDate()).padStart(2, "0");
+
+  let hours = now.getHours();
+  const isAm = hours < 12;
+
+
+  const hh = String(hours).padStart(2, "0");
+  const mm = String(now.getMinutes()).padStart(2, "0");
 
   const dayAfterTomorrow = new Date();
   dayAfterTomorrow.setDate(now.getDate() + 2);
 
-  const formatted = dayAfterTomorrow.toLocaleDateString("ja-JP", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    weekday: "long",
-  });
+ const [todos, setTodos] = useState<Todo[]>([]);
+  const [input, setInput] = useState("");
 
-  const yy = "2026"
-  const MM = "04"
-  const dd = "11"
-  const hh = "04"
-  const mm = "56"
-  const isAm = true
+  // 追加
+  const addTodo = () => {
+    if (!input.trim()) return;
+
+    setTodos([
+      ...todos,
+      { id: Date.now(), text: input, done: false }
+    ]);
+    setInput("");
+  };
+
+  // 削除
+  const deleteTodo = (id: number) => {
+    setTodos(todos.filter(todo => todo.id !== id));
+  };
+
+  // チェック切替
+  const toggleTodo = (id: number) => {
+    setTodos(
+      todos.map(todo =>
+        todo.id === id ? { ...todo, done: !todo.done } : todo
+      )
+    );
+  };
 
   return (
     <div className={styles.mainArea}>
@@ -52,7 +93,48 @@ export default function Page() {
           <input type="checkbox" />
           <span>パンで歯を磨く</span>
         </div>
-      </div>
+        {/*
+        <div className={styles.todoInputArea}>
+          <div style={{ display: "flex", gap: "10px", width: "100%" }}>
+            <input
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              
+              style={{ flex: 1 }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  e.preventDefault();
+                  addTodo();
+                  setInput("");
+                }
+              }}
+            />
+            <button
+              type="button"
+              onClick={addTodo}
+            >
+              Add
+            </button>
+          </div>
+        </div>
+
+        {todos.map(todo => (
+          <div key={todo.id} className={styles.todoItem}>
+            <input
+              type="checkbox"
+              checked={todo.done}
+              onChange={() => toggleTodo(todo.id)}
+            />
+
+            <span className={todo.done ? styles.doneText : ""}>
+              {todo.text}
+            </span>
+
+            <button onClick={() => deleteTodo(todo.id)}>×</button>
+          </div>
+        ))}
+        */}
+       </div>
     </div>
   );
 }
