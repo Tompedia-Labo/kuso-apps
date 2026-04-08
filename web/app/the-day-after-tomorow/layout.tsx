@@ -4,13 +4,9 @@ export default function Layout({
   children: React.ReactNode;
 }) {
   return (
-    <div style={{ padding: 20 }}>
-      <h1 style={{
-        backgroundColor: "white",
-        color: "black"
-      }}>明日の翌日は？</h1>
-      <hr style={{ margin: "20px 0" }} />
+    <div style={{textAlign: "center", backgroundColor: "#825DAB"}}>
       {children}
+      <small style={{ color: "white"}}>© 2026 とんペディア_ラボ. All rights reserved.</small>
     </div>
   );
 }
