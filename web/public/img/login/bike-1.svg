@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220" viewBox="0 0 220 220">
+  <rect width="220" height="220" fill="#ffe7bf"/>
+  <circle cx="70" cy="152" r="30" fill="none" stroke="#2e2e2e" stroke-width="8"/>
+  <circle cx="150" cy="152" r="30" fill="none" stroke="#2e2e2e" stroke-width="8"/>
+  <path d="M70 152 L104 108 L134 152 M104 108 L124 108 L140 80" fill="none" stroke="#2e2e2e" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="12" y="206" font-size="18" font-family="Arial" fill="#1d1d1d">bike lane</text>
+</svg>
