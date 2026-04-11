@@ -4,7 +4,7 @@ import style from "./style.module.css";
 export default function Home() {
   return (
     <main className={style.main}>
-      <h1 className={style.title}>クソWEBアプリ集</h1>
+      <h1 className={style.title}>ご自由にお触りください</h1>
       <div className={style.linkArea}>
         <div className={style.linkBox}>
           <a href="/the-day-after-tomorow">
