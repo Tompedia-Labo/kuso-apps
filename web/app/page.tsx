@@ -1,5 +1,5 @@
 import Image from "next/image";
-import style from "./style.module.css"
+import style from "./style.module.css";
 
 export default function Home() {
   return (
@@ -9,12 +9,7 @@ export default function Home() {
         <div className={style.linkArea}>
           <div className={style.linkBox}>
             <a href="https://info.tompedia.jp">
-              <Image
-                src="/logo.png"
-                width={200}
-                height={200}
-                alt="Tompedia"
-              />
+              <Image src="/logo.png" width={200} height={200} alt="Tompedia" />
               Tompedia
             </a>
           </div>
@@ -40,7 +35,18 @@ export default function Home() {
               ToDo
             </a>
           </div>
-         </div>
+          <div className={style.linkBox}>
+            <a href="/tu-ton">
+              <Image
+                src="/logo.png"
+                width={200}
+                height={200}
+                alt="とんペディア入部フォーム"
+              />
+              とんペディア入部フォーム
+            </a>
+          </div>
+        </div>
       </main>
     </div>
   );
