@@ -6,7 +6,6 @@ export default function Layout({
   return (
     <div style={{textAlign: "center", backgroundColor: "#825DAB"}}>
       {children}
-      <small style={{ color: "white"}}>© 2026 とんペディア_ラボ. All rights reserved.</small>
     </div>
   );
 }
