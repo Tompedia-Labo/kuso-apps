@@ -16,7 +16,7 @@ export default function Home() {
           <div className={style.linkBox}>
             <a href="/the-day-after-tomorow">
               <Image
-                src="/the-day-after-tomorow.png"
+                src="/todo.png"
                 width={200}
                 height={200}
                 alt="The Day after Tomorow's ToDo"
@@ -25,14 +25,14 @@ export default function Home() {
             </a>
           </div>
           <div className={style.linkBox}>
-            <a href="/the-day-after-tomorow">
+            <a href="/login">
               <Image
-                src="/the-day-after-tomorow.png"
+                src="/login.png"
                 width={200}
                 height={200}
-                alt="The Day after Tomorow's ToDo"
+                alt="Login"
               />
-              ToDo
+              ログイン
             </a>
           </div>
           <div className={style.linkBox}>
