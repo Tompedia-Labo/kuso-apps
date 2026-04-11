@@ -40,29 +40,31 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <h1>とんペディアの紹介</h1>
-      <div className={style.linkArea}>
-        <div className={style.linkBox}>
-          <a href="https://info.tompedia.jp" target="_blank">
-            <Image
-              src="/logo.png"
-              width={200}
-              height={200}
-              alt="Tompedia"
-            />
-            とんペディアアプリについて
-          </a>
-        </div>
-        <div className={style.linkBox}>
-          <a href="https://labo.tompedia.jp" target="_blank">
-            <Image
-              src="/logo.png"
-              width={200}
-              height={200}
-              alt="Tompedia"
-            />
-            とんペディア_ラボについて
-          </a>
+      <div className={style.tompediaIntro}>
+        <h1>とんペディアの紹介</h1>
+        <div className={style.linkArea}>
+          <div className={style.linkBox}>
+            <a href="https://info.tompedia.jp" target="_blank">
+              <Image
+                src="/logo.png"
+                width={200}
+                height={200}
+                alt="Tompedia"
+              />
+              とんペディアアプリについて
+            </a>
+          </div>
+          <div className={style.linkBox}>
+            <a href="https://labo.tompedia.jp" target="_blank">
+              <Image
+                src="/logo.png"
+                width={200}
+                height={200}
+                alt="Tompedia"
+              />
+              とんペディア_ラボについて
+            </a>
+          </div>
         </div>
       </div>
     </main>

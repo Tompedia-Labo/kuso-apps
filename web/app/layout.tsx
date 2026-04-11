@@ -40,7 +40,7 @@ export default function RootLayout({
 			>
 				<BackToListButton />
 				{children}
-				<small style={{ color: "white" }}>
+				<small style={{ color: "white", margin: "24px 0" }}>
 					© 2026 とんペディア_ラボ. All rights reserved.
 				</small>
 			</body>
