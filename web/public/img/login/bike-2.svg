@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220" viewBox="0 0 220 220">
-  <rect width="220" height="220" fill="#ffe1a8"/>
-  <circle cx="66" cy="150" r="28" fill="none" stroke="#2e2e2e" stroke-width="8"/>
-  <circle cx="152" cy="150" r="28" fill="none" stroke="#2e2e2e" stroke-width="8"/>
-  <path d="M66 150 L102 108 L124 150 M102 108 L118 108 L138 84" fill="none" stroke="#2e2e2e" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-  <rect x="136" y="82" width="20" height="6" rx="3" fill="#2e2e2e"/>
-  <text x="12" y="206" font-size="18" font-family="Arial" fill="#1d1d1d">city ride</text>
-</svg>

@@ -128,8 +128,9 @@ export default function LoginPage() {
 		setOrientationImagePath(
 			ORIENTATION_IMAGES[Math.floor(Math.random() * ORIENTATION_IMAGES.length)],
 		);
-		setOrientationRotation(pickInitialRotation());
-		setOrientationTargetRotation(pickTargetRotation());
+		const initialRotation = pickInitialRotation();
+		setOrientationRotation(initialRotation);
+		setOrientationTargetRotation(pickTargetRotation(initialRotation));
 		setAreArrowButtonsSwapped(false);
 		setOrientationError("");
 		setAuthStage("orientation");
@@ -151,7 +152,7 @@ export default function LoginPage() {
 	}, []);
 
 	const handleOrientationVerify = useCallback(() => {
-		if (orientationRotation === orientationTargetRotation) {
+		if (orientationRotation === (orientationTargetRotation + 180) % 360) {
 			setAuthStage("success");
 			return;
 		}

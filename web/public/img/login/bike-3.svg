@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220" viewBox="0 0 220 220">
-  <rect width="220" height="220" fill="#ffefcc"/>
-  <circle cx="72" cy="154" r="28" fill="none" stroke="#333" stroke-width="8"/>
-  <circle cx="148" cy="154" r="28" fill="none" stroke="#333" stroke-width="8"/>
-  <path d="M72 154 L106 114 L132 154 M106 114 L122 114 L136 90" fill="none" stroke="#333" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="108" cy="112" r="4" fill="#333"/>
-  <text x="12" y="206" font-size="18" font-family="Arial" fill="#1d1d1d">weekend ride</text>
-</svg>
