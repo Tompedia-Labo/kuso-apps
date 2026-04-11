@@ -21,7 +21,7 @@ export default function Home() {
           <div className={style.linkBox}>
             <a href="/the-day-after-tomorow">
               <Image
-                src="/the-day-after-tomorow.png"
+                src="/todo.png"
                 width={200}
                 height={200}
                 alt="The Day after Tomorow's ToDo"
